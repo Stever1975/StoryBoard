@@ -4,6 +4,36 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="uoU-dr-1TR">
+            <objects>
+                <tableViewController id="vDL-0j-5a4" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dwr-ky-1e0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hMO-Ia-w6y">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vDL-0j-5a4" id="fpE-lx-Rba"/>
+                            <outlet property="delegate" destination="vDL-0j-5a4" id="X6o-zj-TA9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fkZ-LE-962"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcH-wC-mWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317" y="84"/>
+        </scene>
         <!--Players View Controller-->
         <scene sceneID="G8M-d5-HWA">
             <objects>
@@ -53,11 +83,17 @@
                             <outlet property="delegate" destination="cBq-v1-gJA" id="Taf-aT-FP0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xif-Fz-Asd"/>
+                    <navigationItem key="navigationItem" id="Xif-Fz-Asd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JZp-SV-X9J">
+                            <connections>
+                                <segue destination="bKi-bf-RuJ" kind="modal" id="2es-fq-oly"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9O-eW-Fre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="19"/>
+            <point key="canvasLocation" x="1669" y="19"/>
         </scene>
         <!--View Controller - Gestures-->
         <scene sceneID="y1I-IR-yye">
@@ -110,7 +146,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dS-il-fPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-225"/>
+            <point key="canvasLocation" x="1167" y="128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lo0-Qh-JBf">
+            <objects>
+                <navigationController id="bKi-bf-RuJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lsf-4q-3aL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vDL-0j-5a4" kind="relationship" relationship="rootViewController" id="eJo-Pl-iTy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIB-nS-oVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="-268"/>
         </scene>
     </scenes>
     <classes>
