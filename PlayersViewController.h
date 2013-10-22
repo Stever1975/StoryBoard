@@ -1,5 +1,5 @@
 //
-//  SRFirstViewController.h
+//  PlayersViewController.h
 //  Ratings
 //
 //  Created by Steve Rowley on 10/21/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SRFirstViewController : UIViewController
-
+@interface PlayersViewController : UITableViewController
+@property (nonatomic, strong) NSMutableArray *players;
 @end

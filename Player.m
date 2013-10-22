@@ -1,13 +1,13 @@
 //
-//  SRSecondViewController.h
+//  Player.m
 //  Ratings
 //
 //  Created by Steve Rowley on 10/21/13.
 //  Copyright (c) 2013 Steve Rowley. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Player.h"
 
-@interface SRSecondViewController : UIViewController
+@implementation Player
 
 @end
